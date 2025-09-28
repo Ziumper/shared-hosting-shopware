@@ -1,0 +1,14 @@
+services:
+  shop:
+    image: dockware/shopware:6.7.2.2
+    container_name: shop
+    ports:
+      - "80:80"
+      - "3306:3306"
+      - "443:443"
+    environment:
+      - PHP_VERSION=8.3
+      - NODE_VERSION=20
+    volumes:
+      - ./:/var/www/html
+      
