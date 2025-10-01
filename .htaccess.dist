@@ -1,6 +1,6 @@
 AuthType Basic
 AuthName "Login Required"
-AuthUserFile "/home/vol7_3/infinityfree.com/if0_39866097/templodocs.rf.gd/htdocs/.htpasswd"
+AuthUserFile "/home/vol7_3/infinityfree.com/if0_39866097/htdocs/.htpasswd"
 Require valid-user
 
 <IfModule mod_rewrite.c>

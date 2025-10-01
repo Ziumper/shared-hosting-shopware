@@ -1,14 +1,12 @@
-DirectoryIndex index.html index.php
+#AuthType Basic
+#AuthName "Login Required"
+#AuthUserFile "/home/vol7_3/infinityfree.com/if0_39866097/htdocs/.htpasswd"
+#Require valid-user
 
-<IfModule mod_negotiation.c>
-    Options -MultiViews
-</IfModule>
+<IfModule mod_rewrite.c>
+    RewriteEngine On
 
-<IfModule mod_alias.c>
-    # Restrict access to VCS directories
-    RedirectMatch 404 /\\.(svn|git|hg|bzr|cvs)(/|$)
-
-    # Restrict access to root folder files
-    RedirectMatch 404 /(composer\.(json|lock|phar)|README\.md|\.gitignore|.*\.dist|\.env.*)$
+    # Redirect everything public/
+    RewriteRule ^(.*)$ public/$1 [L]
 </IfModule>
 
