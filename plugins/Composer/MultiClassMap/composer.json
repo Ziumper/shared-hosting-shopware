@@ -1,0 +1,17 @@
+{
+    "name": "ziumper/shopware-multi-classmap-plugin",
+    "description": "Composer plugin dzielący classmap na partycje",
+    "type": "composer-plugin",
+    "version": "1.0",
+    "require": {
+        "composer-plugin-api": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ziumper\\Shopware\\Composer\\MultiClassMap\\": "./"
+        }
+    },
+    "extra": {
+        "class": "Ziumper\\Shopware\\Composer\\MultiClassMap\\MultiClassMapPlugin"
+    }
+}

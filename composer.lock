@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a674f1be45a8e71333aa8e07f9385658",
+    "content-hash": "50cd9858c8298aec1b83ae8a5cd5f592",
     "packages": [
         {
             "name": "async-aws/core",
@@ -11138,6 +11138,32 @@
                 "source": "https://github.com/zircote/swagger-php/tree/4.11.1"
             },
             "time": "2024-10-15T19:20:02+00:00"
+        },
+        {
+            "name": "ziumper/shopware-multi-classmap-plugin",
+            "version": "1.0",
+            "dist": {
+                "type": "path",
+                "url": "plugins/Composer/MultiClassMap",
+                "reference": "f8abf3f4b87bddd04b0d05611e1b1408bcf659ca"
+            },
+            "require": {
+                "composer-plugin-api": "^2.0"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Ziumper\\Shopware\\Composer\\MultiClassMap\\MultiClassMapPlugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Ziumper\\Shopware\\Composer\\MultiClassMap\\": "./"
+                }
+            },
+            "description": "Composer plugin dzielący classmap na partycje",
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
         }
     ],
     "packages-dev": [
@@ -13598,12 +13624,12 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "composer-runtime-api": "^2.0"
     },
-    "platform-dev": [],
-    "plugin-api-version": "2.2.0"
+    "platform-dev": {},
+    "plugin-api-version": "2.6.0"
 }

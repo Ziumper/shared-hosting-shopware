@@ -7,7 +7,8 @@
     "shopware/core": "v6.7.2.2",
     "shopware/elasticsearch": "*",
     "shopware/storefront": "*",
-    "symfony/flex": "~2"
+    "symfony/flex": "~2",
+    "ziumper/shopware-multi-classmap-plugin": "*"
   },
   "repositories": [
     {
@@ -30,19 +31,22 @@
       "options": {
         "symlink": true
       }
+    },
+     {
+    "type": "path",
+    "url": "plugins/Composer/*",
+    "options": {
+      "symlink": true
     }
+  }
   ],
-  "autoload": {
-    "psr-4": {
-      "App\\": "src/"
-    }
-  },
   "minimum-stability": "stable",
   "prefer-stable": true,
   "config": {
     "allow-plugins": {
       "symfony/flex": true,
-      "symfony/runtime": true
+      "symfony/runtime": true,
+      "ziumper/shopware-multi-classmap-plugin": true
     },
     "optimize-autoloader": true,
     "sort-packages": true
