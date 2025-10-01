@@ -73,8 +73,8 @@ class MultiClassMapPlugin implements PluginInterface, EventSubscriberInterface {
                         );
                     }
                 }
+            }
         }
-    }
     }
 
     #[Override]
