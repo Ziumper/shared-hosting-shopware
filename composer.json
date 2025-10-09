@@ -7,8 +7,7 @@
     "shopware/core": "v6.7.2.2",
     "shopware/elasticsearch": "*",
     "shopware/storefront": "*",
-    "symfony/flex": "~2",
-    "ziumper/shopware-multi-classmap-plugin": "*"
+    "symfony/flex": "~2"
   },
   "repositories": [
     {
@@ -31,14 +30,7 @@
       "options": {
         "symlink": true
       }
-    },
-     {
-    "type": "path",
-    "url": "plugins/Composer/*",
-    "options": {
-      "symlink": true
     }
-  }
   ],
   "minimum-stability": "stable",
   "prefer-stable": true,
