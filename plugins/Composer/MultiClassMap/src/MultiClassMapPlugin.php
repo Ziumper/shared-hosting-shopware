@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Ziumper\Shopware\Composer\MultiClassMap;
+namespace Ziumper\MultiClassMap;
 
 use Composer\Composer;
 use Composer\EventDispatcher\EventSubscriberInterface;
@@ -10,7 +10,6 @@ use Composer\IO\IOInterface;
 use Composer\Plugin\PluginInterface;
 use Composer\Script\Event;
 use Override;
-use function str_starts_with;
     
 class MultiClassMapPlugin implements PluginInterface, EventSubscriberInterface {
     

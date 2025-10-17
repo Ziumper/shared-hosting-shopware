@@ -8,7 +8,7 @@
     "shopware/elasticsearch": "*",
     "shopware/storefront": "*",
     "symfony/flex": "~2",
-    "ziumper/shopware-multi-classmap-plugin": "*"
+    "ziumper/multi-classmap": "*"
   },
   "repositories": [
     {
@@ -46,7 +46,7 @@
     "allow-plugins": {
       "symfony/flex": true,
       "symfony/runtime": true,
-      "ziumper/shopware-multi-classmap-plugin": true
+      "ziumper/multi-classmap": true
     },
     "optimize-autoloader": true,
     "sort-packages": true
@@ -72,6 +72,7 @@
     }
   },
   "require-dev": {
+    "phpunit/phpunit": "^12.3",
     "shopware/dev-tools": "^1.5"
   }
 }
