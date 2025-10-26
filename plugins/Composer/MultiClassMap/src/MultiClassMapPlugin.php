@@ -20,15 +20,13 @@ class MultiClassMapPlugin implements PluginInterface, EventSubscriberInterface {
     public static function getSubscribedEvents(): array
     {
         return [
-            'post-autoload-dump' => 'splitClassmap',
+            'post-autoload-dump' => 'onPostAutloadDump',
         ];
     }
     
     public function onPostAutloadDump(Event $event): void
     {
-        $spliter = new AutoloadSpliter();
-        $vendorDir = $event->getComposer()->getConfig()->get('vendor-dir');
-        $spliter->splitMap($vendorDir);
+        
     }
 
     #[Override]
