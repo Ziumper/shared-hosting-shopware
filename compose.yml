@@ -9,5 +9,5 @@ services:
     environment:
       - PHP_VERSION=8.3
     volumes:
-      - ./:/var/www/html
-      
+      - ./src/:/var/www/html
+
