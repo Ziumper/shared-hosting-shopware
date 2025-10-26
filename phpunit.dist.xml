@@ -22,7 +22,7 @@
             <directory>tests</directory>
         </testsuite>
         <testsuite name="Composer Plugins Test Suite">
-            <directory>plugins/composer</directory>
+            <directory>custom/composer-plugins</directory>
         </testsuite>
     </testsuites>
 
@@ -33,7 +33,7 @@
     >
         <include>
             <directory>src</directory>
-            <directory>plugins/composer</directory>
+            <directory>custom/composer-plugins</directory>
         </include>
 
         <deprecationTrigger>

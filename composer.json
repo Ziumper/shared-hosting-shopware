@@ -34,7 +34,7 @@
         },
         {
             "type": "path",
-            "url": "plugins/composer/*",
+            "url": "custom/composer-plugins/*",
             "options": {
                 "symlink": true
             }

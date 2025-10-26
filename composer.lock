@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5a82eef4e36a48f323ccf3fc577c2a4c",
+    "content-hash": "d4d6b9e8ef02e48af20333d21fccf4d7",
     "packages": [
         {
             "name": "async-aws/core",
@@ -11157,7 +11157,7 @@
             "version": "1.0",
             "dist": {
                 "type": "path",
-                "url": "plugins/composer/MultiClassMap",
+                "url": "custom/composer-plugins/MultiClassMap",
                 "reference": "219fb9cb0557df641676bbc968d8d37c5df0c16c"
             },
             "require": {
