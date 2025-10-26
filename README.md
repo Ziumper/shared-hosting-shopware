@@ -3,6 +3,9 @@
 ## TODOs
 
 * autoload splitting
+* plugin for disabling notofications in admin panel 
+* sql lite adapter 
+* deployment jobs
 
 
 ## Debugging
