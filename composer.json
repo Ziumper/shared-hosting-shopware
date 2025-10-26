@@ -7,7 +7,6 @@
         "shopware/core": "v6.7.2.2",
         "shopware/elasticsearch": "*",
         "shopware/storefront": "*",
-        "swag/paypal": "10.1.2",
         "symfony/flex": "~2",
         "ziumper/multi-classmap": "*"
     },
@@ -47,7 +46,8 @@
         "allow-plugins": {
             "symfony/flex": true,
             "symfony/runtime": true,
-            "ziumper/multi-classmap": true
+            "ziumper/multi-classmap": true,
+            "php-http/discovery": true
         },
         "optimize-autoloader": true,
         "sort-packages": true
