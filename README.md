@@ -3,7 +3,6 @@
 ## TODOs
 
 * autoload splitting
-* fix docker compose instance volumes
 
 
 ## Debugging
