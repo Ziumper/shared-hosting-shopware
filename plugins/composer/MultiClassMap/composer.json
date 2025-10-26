@@ -13,7 +13,7 @@
     },
     "autoload-dev": {
         "ps-4": {
-            "Ziumper\\MultiClassMap" : "tests/"
+            "Ziumper\\MultiClassMap\\Tests\\Unit" : "tests/"
         }
     },
     "extra": {
