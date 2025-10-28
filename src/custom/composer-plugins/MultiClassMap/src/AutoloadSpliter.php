@@ -38,6 +38,7 @@ class AutoloadSpliter {
         return [];
     }
     
+    //TODO Composer\Autoload\AutoLoadGenerator - reuse it for my own generation of auto load class map files
     public function split(): void
     {
         $parts = $this->getClassMapParts();
@@ -70,7 +71,7 @@ class AutoloadSpliter {
 
                     foreach ($staticParts as $name => $map) {
                         file_put_contents(
-                            $vendorDir . "/composer/autoload_static_classmap_" . strtolower($name) . ".php",
+                            $this->vendorDir . "/composer/autoload_static_classmap_" . strtolower($name) . ".php",
                             "<?php\n\nreturn " . var_export($map, true) . ";\n"
                         );
                     }

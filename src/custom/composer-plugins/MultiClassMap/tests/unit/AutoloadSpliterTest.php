@@ -14,5 +14,6 @@ class AutoloadSpliterTest extends TestCase
         $spliter = new AutoloadSpliter(__DIR__."/../fixtures/test_vendor");
         $parts = $spliter->getClassMapParts();
         static::assertNotEmpty($parts);
+        static::assertCount(307, $parts);
     }
 }

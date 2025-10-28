@@ -26,7 +26,9 @@ class MultiClassMapPlugin implements PluginInterface, EventSubscriberInterface {
     
     public function onPostAutloadDump(Event $event): void
     {
-        
+        $vendorDir = $event->getComposer()->getConfig()->get('vendor-dir');
+        $spliter = new AutoloadSpliter($vendorDir);
+        $spliter->split();
     }
 
     #[Override]
