@@ -16,11 +16,15 @@ class AutoloadSpliter {
     
     public function getClassMapParts(): array 
     {
-        if (!file_exists($this->classmapFile)) {
+        return $this->getParts($this->classmapFile);
+    }
+    
+    private function getParts(string $file) {
+        if (!file_exists($file)) {
             return [];
         }
 
-        $classmap = include $this->classmapFile;
+        $classmap = include $file;
 
         $parts = [];
         
@@ -35,7 +39,7 @@ class AutoloadSpliter {
     
     public function getStaticParts(): array 
     {
-        return [];
+        return $this->getParts($this->staticFile);
     }
     
     //TODO Composer\Autoload\AutoLoadGenerator - reuse it for my own generation of auto load class map files
@@ -43,6 +47,7 @@ class AutoloadSpliter {
     {
         $parts = $this->getClassMapParts();
         
+        //save the specifc files into seperated class map files
         foreach ($parts as $name => $map) {
             file_put_contents(
                 $this->vendorDir . "/composer/autoload_classmap_{$name}.php",
@@ -50,6 +55,8 @@ class AutoloadSpliter {
             );
         }
         
+        
+        //same for auto load
         $autoloadStaticFile = $this->vendorDir . '/composer/autoload_static.php';
         if (file_exists($autoloadStaticFile)) {
                 require_once $autoloadStaticFile;
