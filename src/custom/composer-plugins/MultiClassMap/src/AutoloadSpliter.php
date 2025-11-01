@@ -10,8 +10,8 @@ class AutoloadSpliter {
     private string $staticFile;
     
     public function __construct(private string $vendorDir) {
-        $this->classmapFile = $vendorDir . '/composer/autoload_classmap.php';
-        $this->staticFile = $vendorDir . '/composer/autoload_static.php';
+        $this->classmapFile = $this->vendorDir . '/composer/autoload_classmap.php';
+        $this->staticFile = $this->vendorDir . '/composer/autoload_static.php';
     }
     
     public function getClassMapParts(): array 
@@ -19,6 +19,15 @@ class AutoloadSpliter {
         return $this->getParts($this->classmapFile);
     }
     
+    /**
+     * 
+     * We are taking the path without vendor to redo 
+     * a install map, it may change how composer autoload is doing 
+     * things in future, this way we just do our thing 
+     * 
+     * @param string $file
+     * @return array
+     */
     private function getParts(string $file) {
         if (!file_exists($file)) {
             return [];
@@ -29,13 +38,16 @@ class AutoloadSpliter {
         $parts = [];
         
         foreach ($classmap as $class => $path) {
+            $pathWithoutVendor = str_replace($this->vendorDir, '', $path);
+            
+            //gets the first prefix of the class name after first '\' sign
             $prefix = explode('\\', $class, 2)[0] ?: 'global';
-            $parts[$prefix][$class] = $path;
+            $parts[$prefix][$class] = $pathWithoutVendor;
         }
-        
-        
+            
         return $parts;
     }
+    
     
     public function getStaticParts(): array 
     {
