@@ -75,9 +75,10 @@ class AutoloadSpliter {
             PHP;
             
             foreach($map as $className => $path) {
+                $classNameWithDoubleBackwardSlash = str_replace("\\","\\\\",$className);
                 $partContent .= <<<PHP
-                   "$className => \$vendorDir . $path",
-   
+                    "$classNameWithDoubleBackwardSlash" => \$vendorDir . "$path",
+                        
                 PHP;
             }
             
@@ -120,7 +121,7 @@ class AutoloadSpliter {
         $autoloadContent .= <<<PHP
         foreach (\$parts as \$file) {
             // include each partial array
-            \$part = include __DIR__ . '/' . \$file;
+            \$part = include \$file;
             if (is_array(\$part)) {
                 \$map += \$part;
             }

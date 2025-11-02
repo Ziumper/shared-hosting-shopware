@@ -30,4 +30,18 @@ class AutoloadSpliterTest extends TestCase
         static::assertNotEmpty($path, " The path should not be empty");
         static::assertStringNotContainsString($this->vendorDir, $path, "There is a vendor folder inside!");
     }
+    
+//    public function testPartHasTwoDoubleSlashForPrefixPart() {
+//        $spliter = new AutoloadSpliter($this->vendorDir);
+//        $parts = $spliter->getClassMapParts();
+//        static::assertNotEmpty($parts);
+//        array_pop($parts);
+//        array_pop($parts);
+//        $element = array_pop($parts);
+//       
+//        static::assertNotEmpty($element);
+//        $prefix = array_keys($element)[0];
+//         var_dump($prefix);
+//        static::assertStringContainsString("\\\\", $prefix);
+//    }
 }
