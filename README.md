@@ -2,9 +2,10 @@
 
 ## TODOs
 
-* autoload splitting
-* autoload static splitting
-* plugin for disabling notofications in admin panel 
+* autoload splitting [x]
+* autoload static splitting [x]
+* plugin for disabling notofications in admin panel - extend notification.service.js inside administration panel
+* disable queue message probably inside symfony config
 * sql lite adapter 
 * deployment jobs
 
