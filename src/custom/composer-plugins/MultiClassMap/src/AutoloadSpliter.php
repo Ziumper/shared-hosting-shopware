@@ -167,8 +167,15 @@ class AutoloadSpliter {
         
         $newCode = substr($code, 0, $openPos-6). "array();" . substr($code, $semicolonPos + 1);
 
-        // save
-        //TODO find getInitalizer $loader->loadClassMap and include autoload classmap without generating new files 
+        $regexp = '/\$loader->classMap\s*=[^;]+;/';
+        if (preg_match($regexp, $newCode, $matches, PREG_OFFSET_CAPTURE)) {
+            $startPos = $matches[0][1];
+            $endPos = $startPos + strlen($matches[0][0]) - 1; 
+        } else {
+           throw new RuntimeException("No loader classmap found");
+        }
+        
+        $newCode = str_replace($matches[0][0],"\$loader->classMap = include __DIR__ . '/autoload_classmap.php';" ,$newCode);
         if (file_put_contents($this->staticFile, $newCode) === false) {
             throw new RuntimeException("Saving the file has failed: $this->staticFile");
         }
