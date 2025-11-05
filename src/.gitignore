@@ -1,6 +1,6 @@
 /.idea
 /vendor/
-/nbproject
+/nbproject/
 
 ###> shopware/core ###
 .env.local
@@ -25,4 +25,3 @@ public/asset-manifest.json
 /.phpunit.cache/
 ###< phpunit/phpunit ###
 /.env
-
