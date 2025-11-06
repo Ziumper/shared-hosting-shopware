@@ -1,0 +1,28 @@
+{
+    "name": "ziumper/shared-hosting",
+    "description": "Shared Hosting Plugin adjustments",
+    "type": "shopware-platform-plugin",
+    "version": "1.0.0",
+    "license": "MIT",
+    "require": {
+        "shopware/core": "~6.7.0"
+    },
+    "extra": {
+        "shopware-plugin-class": "Ziumper\\SharedHosting\\SharedHosting",
+        "label": {
+            "de-DE": "Shared Hosting für Shopware",
+            "en-GB": "Shared hosting for Shopware",
+            "pl-PL": "Wtyczka hostingu współdzielonego Shopware"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Ziumper\\SharedHosting\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ziumper\\SharedHosting\\Tests\\": "tests/"
+        }
+    }
+}
