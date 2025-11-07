@@ -17,7 +17,7 @@ set -o allexport
 eval "$curenv"
 set +o allexport
 
-export HOST=${HOST:-"localhost"}
+export HOST=${HOST:-"0.0.0.0"}
 export VITE_HOST
 export ADMIN_PORT
 export APP_URL
