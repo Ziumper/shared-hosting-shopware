@@ -1,1 +1,3 @@
-console.log("I am a entry point in Shopware");
+import AdminAppOverrideService from './service/admin-app-override.service';
+
+AdminAppOverrideService.overrideFetchNotifications();
