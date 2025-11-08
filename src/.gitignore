@@ -25,3 +25,4 @@ public/asset-manifest.json
 /.phpunit.cache/
 ###< phpunit/phpunit ###
 /.env
+.tmp
