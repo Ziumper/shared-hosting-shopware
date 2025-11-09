@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Ziumper\MultiClassMap;
 
+use RuntimeException;
+
 class AutoloadSpliter {
     
     private string $classmapFile;
