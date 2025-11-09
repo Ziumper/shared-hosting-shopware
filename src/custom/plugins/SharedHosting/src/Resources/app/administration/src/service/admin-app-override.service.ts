@@ -17,18 +17,18 @@ export default class AdminAppOverrideService {
     * Praise the functional programming!
     */
     static overrideFetchNotifications(): void {
-      const notificationsService = Service('notificationsService');
-      if (!notificationsService) {
-          console.error("No notifications service found");
-          return;
-      }
+        const notificationsService = Service('notificationsService');
+        if (!notificationsService) {
+            console.error("No notifications service found");
+            return;
+        }
 
-      notificationsService.fetchNotifications = function (limit?: number, latestTimestamp?: number | null): any {
-        const notifications = [];
-        const timestamp = undefined;
-        return { 
-              then: function (notifications, timestamp) { return { catch: function (error) { return } }},
-          };
-      };
+        notificationsService.fetchNotifications = function (limit?: number, latestTimestamp?: number | null): any {
+          const notifications = [];
+          const timestamp = undefined;
+          return { 
+                then: function (notifications, timestamp) { return { catch: function (error) { return } }},
+            };
+        };
     }
 }
