@@ -73,6 +73,7 @@
         }
     },
     "require-dev": {
+        "mpyw/comphar": "^1.0",
         "phpunit/phpunit": "^12.3",
         "shopware/dev-tools": "^1.5"
     }

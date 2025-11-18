@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0a3e9d7c82a62df08bece3b8c7d4919e",
+    "content-hash": "0fa22f3d1a69300e440411ea49bf15e0",
     "packages": [
         {
             "name": "async-aws/core",
@@ -11538,6 +11538,44 @@
             "time": "2023-12-26T14:31:52+00:00"
         },
         {
+            "name": "mpyw/comphar",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mpyw/comphar.git",
+                "reference": "994a80cd43c09e8106bb1730a00236a19f1bbcbc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mpyw/comphar/zipball/994a80cd43c09e8106bb1730a00236a19f1bbcbc",
+                "reference": "994a80cd43c09e8106bb1730a00236a19f1bbcbc",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "bin": [
+                "bin/comphar"
+            ],
+            "type": "project",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "mpyw",
+                    "email": "ryosuke_i_628@yahoo.co.jp"
+                }
+            ],
+            "description": "Pack all composer dependencies into a single phar file",
+            "support": {
+                "issues": "https://github.com/mpyw/comphar/issues",
+                "source": "https://github.com/mpyw/comphar/tree/v1.0.1"
+            },
+            "time": "2019-02-16T17:14:47+00:00"
+        },
+        {
             "name": "myclabs/deep-copy",
             "version": "1.13.4",
             "source": {
@@ -13594,12 +13632,12 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "composer-runtime-api": "^2.0"
     },
-    "platform-dev": {},
-    "plugin-api-version": "2.6.0"
+    "platform-dev": [],
+    "plugin-api-version": "2.2.0"
 }
