@@ -1,11 +1,11 @@
 # Shopware for Shared hosting
 
-## Optimzations made
+## Optimzations
 * autoload splitting [x]
 * autoload static splitting [x]
 * plugin for disabling notofications in admin panel - extend notification.service.js inside administration panel [x]
 * disabled queue message probably inside symfony config [x]
-* don't upload node_modules inside 'administration' and 'storefront' they are not needed after compilation [ ]
+* ignore upload node_modules inside 'administration' and 'storefront' [x]
 
 ## Folders to deploy:
 
