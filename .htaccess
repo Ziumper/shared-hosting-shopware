@@ -2,6 +2,5 @@
     RewriteEngine On
 
     # Redirect everything public/
-    RewriteRule ^(.*)$ public/$1 [L]
+    RewriteRule ^(.*)$ public/maintenance.html [L]
 </IfModule>
-

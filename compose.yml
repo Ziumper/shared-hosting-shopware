@@ -10,5 +10,8 @@ services:
     environment:
       - PHP_VERSION=8.3
     volumes:
-      - ./src/:/var/www/html
+      - ./:/var/www/html
+      - db-data:/var/lib/mysql
 
+volumes:
+  db-data:
